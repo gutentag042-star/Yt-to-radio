@@ -1,0 +1,11 @@
+bash
+#!/bin/bash
+Env-Variablen (werden per
+Railway gesetzt)
+YOUTUBE_URL="YOUTUBE_URL" ICECAST_USER="ICECAST_USER" ICECAST_PASS="ICECAST_PASS" ICECAST_HOST="ICECAST_HOST" ICECAST_PORT="ICECAST_PORT" ICECAST_MOUNT="ICECAST_MOUNT"
+Starte Stream yt-dlp -o--f bestaudio
+"YOUTUBE_URL" I ffmpeg -i -
+-vn -c:a libmp3lame -b:a 128k
+-f mp3 icecast://
+ICECAST_USER: ICECAST_PASSQICE
+CAST_HOST: ICECAST_PORT/ ICECAST_MOUNT
