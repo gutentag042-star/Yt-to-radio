@@ -1,11 +1,11 @@
-# Basis-Image
-FROM alpine:latest
+# Basis: offizielles Python-Image
+FROM python:3.11-slim
 
-# ffmpeg, python3, pip und curl installieren
-RUN apk add --no-cache ffmpeg python3 py3-pip bash curl
+# ffmpeg installieren
+RUN apt-get update && apt-get install -y ffmpeg curl bash && rm -rf /var/lib/apt/lists/*
 
 # yt-dlp installieren
-RUN pip install yt-dlp
+RUN pip install --no-cache-dir yt-dlp
 
 # Arbeitsverzeichnis
 WORKDIR /app
