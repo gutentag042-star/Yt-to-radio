@@ -2,7 +2,7 @@
 
 # === Konfiguration ===
 # YouTube Stream URL (ersetzen!)
-YOUTUBE_URL="https://m.youtube.com/watch?v=xf9Ejt4OmWQ&pp=ygUMU3Bpbm5pbiAyNCA3"
+YOUTUBE_URL="https://www.youtube.com/watch?v=xF9Ejt40mWQ"
 
 # Caster.FM Daten (ersetzen!)
 CASTER_HOST="sapircast.caster.fm"
