@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# === KONFIGURATION ===
-YOUTUBE_URL="https://m.youtube.com/watch?v=xf9Ejt4OmWQ&pp=ygUMU3Bpbm5pbiAyNCA3"
+# === Konfiguration ===
+# YouTube Stream URL (ersetzen!)
+YOUTUBE_URL="https://www.youtube.com/watch?v=DEINE_STREAM_ID"
 
-# Caster.fm Zugangsdaten
-CASTER_HOST="sapircast.caster.fm"
-CASTER_PORT="18560"
-CASTER_PASSWORD="VXpoCYCQWT"
-MOUNTPOINT="/9OzKK"  # Caster.fm nutzt meist "/stream" als Mountpoint
+# Caster.FM Daten (ersetzen!)
+CASTER_HOST="x.yourcasterserver.caster.fm"
+CASTER_PORT="12345"
+CASTER_PASSWORD="deinpasswort"
+CASTER_MOUNT="/live"   # manchmal / oder /stream – hängt von deinem Account ab
 
-# === STREAM STARTEN ===
-yt-dlp -f bestaudio -o - "$YOUTUBE_URL" | ffmpeg -re -i - \
-  -vn -acodec libmp3lame -b:a 128k -content_type audio/mpeg \
-  -f mp3 "icecast://source:$CASTER_PASSWORD@$CASTER_HOST:$CASTER_PORT/$MOUNTPOINT"
+# === Stream starten ===
+ffmpeg -re -i "$YOUTUBE_URL" \
+  -vn -acodec libmp3lame -ar 44100 -b:a 128k \
+  -content_type audio/mpeg \
+  -f mp3 "icecast://source:${CASTER_PASSWORD}@${CASTER_HOST}:${CASTER_PORT}${CASTER_MOUNT}"
