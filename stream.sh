@@ -2,13 +2,13 @@
 
 # === Konfiguration ===
 # YouTube Stream URL (ersetzen!)
-YOUTUBE_URL="https://www.youtube.com/watch?v=DEINE_STREAM_ID"
+YOUTUBE_URL="https://m.youtube.com/watch?v=xf9Ejt4OmWQ&pp=ygUMU3Bpbm5pbiAyNCA3"
 
 # Caster.FM Daten (ersetzen!)
-CASTER_HOST="x.yourcasterserver.caster.fm"
-CASTER_PORT="12345"
-CASTER_PASSWORD="deinpasswort"
-CASTER_MOUNT="/live"   # manchmal / oder /stream – hängt von deinem Account ab
+CASTER_HOST="sapircast.caster.fm"
+CASTER_PORT="18560"
+CASTER_PASSWORD="VXpoCYCQWT"
+CASTER_MOUNT="/9OzKK"   # manchmal / oder /stream – hängt von deinem Account ab
 
 # === Stream starten ===
 ffmpeg -re -i "$YOUTUBE_URL" \
